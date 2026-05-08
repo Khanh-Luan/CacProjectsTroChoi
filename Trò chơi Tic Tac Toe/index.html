@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Minimalist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <div class="mode-selector">
+                <button id="pvp-btn" class="active">Người vs Người</button>
+                <button id="pva-btn">Người vs AI</button>
+            </div>
+            <div class="status-display" id="status">Lượt của X</div>
+        </header>
+
+        <main>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="winning-line" id="winning-line"></div>
+        </main>
+
+        <footer>
+            <button id="reset-btn" class="reset-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Chơi lại
+            </button>
+        </footer>
+    </div>
+    
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-text">X Chiến Thắng!</h2>
+            <button id="modal-reset-btn">Chơi Lại</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
